@@ -43,15 +43,15 @@ you want to add and configure the sensors in before()
 #define SKETCH_NAME "NodeManager_BMP085_DHT11"
 #define SKETCH_VERSION "1.0"
 #define MY_DEBUG
-#define MY_DEBUG_VERBOSE
+// #define MY_DEBUG_VERBOSE
 //#define MY_NODE_ID 99
 
 // NRF24 radio settings
 #define MY_RADIO_RF24
 //#define MY_RF24_ENABLE_ENCRYPTION
-#define MY_RF24_CHANNEL (63)
-#define MY_RF24_PA_LEVEL RF24_PA_HIGH
-//#define MY_DEBUG_VERBOSE_RF24
+#define MY_RF24_CHANNEL (10)
+#define MY_RF24_PA_LEVEL RF24_PA_MAX
+// #define MY_DEBUG_VERBOSE_RF24
 #define MY_RF24_DATARATE RF24_250KBPS
 
 // Message signing settings
@@ -85,7 +85,7 @@ you want to add and configure the sensors in before()
 // nodeManager.setSleepBetweenSend(500) and run the board at 1Mhz
 //#define MY_TRANSPORT_UPLINK_CHECK_DISABLED
 //#define MY_TRANSPORT_WAIT_READY_MS  5000
-#define MY_TRANSPORT_WAIT_READY_MS  3000
+// #define MY_TRANSPORT_WAIT_READY_MS  3000
 //#define MY_SLEEP_TRANSPORT_RECONNECT_TIMEOUT_MS 2000
 //#define MY_PARENT_NODE_ID 0
 //#define MY_PARENT_NODE_IS_STATIC
@@ -107,8 +107,9 @@ you want to add and configure the sensors in before()
 #define NODEMANAGER_RTC OFF
 #define NODEMANAGER_SD OFF
 #define NODEMANAGER_HOOKING OFF
-#define NODEMANAGER_OTA_CONFIGURATION ON
+#define NODEMANAGER_OTA_CONFIGURATION OFF
 #define NODEMANAGER_SERIAL_INPUT OFF
+
 
 // import NodeManager library (a nodeManager object will be then made available)
 #include <MySensors_NodeManager.h>
